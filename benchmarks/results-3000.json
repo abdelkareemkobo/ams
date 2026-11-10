@@ -1,0 +1,1730 @@
+{
+  "baseline": {
+    "expected_revision": "45351ff95ce79684c23377920b92026ecbe9759b",
+    "repository": "/tmp/ams-session-migrate",
+    "revision": "45351ff95ce79684c23377920b92026ecbe9759b"
+  },
+  "configuration": {
+    "ams_jobs": 1,
+    "baseline_jobs": "not configurable",
+    "migration": false,
+    "repeats": 9,
+    "sessions": 3000
+  },
+  "corpus": {
+    "body_matches": 429,
+    "body_query": "buriedlantern",
+    "bytes": 20230058,
+    "files": 3000,
+    "fixture_templates": {
+      "codex": {
+        "path": "tests/fixtures/codex-0.144.4/basic.jsonl",
+        "sha256": "c2909c6f9f3d736f311e2e5db7129118cd8cd3200d866da4c9868051e1cac771"
+      },
+      "omp": {
+        "path": "tests/fixtures/omp-18.0.5/basic.jsonl",
+        "sha256": "8dc135032383bdc09b5d8dc2df3ae1159eb3748cdd63fa5011298c0fdf45dba3"
+      },
+      "pi": {
+        "path": "tests/fixtures/pi-0.80.6/basic.jsonl",
+        "sha256": "89d5833170b60d7f8dc33bba247d6ac20ea1b783f984912c9f311d1415158587"
+      }
+    },
+    "formats": {
+      "codex": 1000,
+      "omp": 1000,
+      "pi": 1000
+    },
+    "sha256": "4efb3e2dd8380c90683e2fb3eb5f52bf3038dab92eb74e70484cc02ae9f43e90",
+    "title_matches": 600,
+    "title_query": "atlasgarden"
+  },
+  "correctness": {
+    "body_matched_ids": true,
+    "incremental_counts": true,
+    "metadata_matched_ids": true,
+    "preflight": "passed",
+    "source_corpus_unchanged": true
+  },
+  "executables": {
+    "ams": {
+      "executable": "target/release/ams",
+      "sha256": "d069ca423690cb15f334675212db686df8d89a9949649b74df6513454a059dc1",
+      "version": "ams 0.1.0"
+    },
+    "baseline": {
+      "executable": "/tmp/ams-baseline-venv/bin/session-migrate",
+      "sha256": "9a1a0af30151f72752a113e262537ca5ba9ad89ab8349229e23d1bfd5b84b8a7",
+      "version": "session-migrate 0.12.0"
+    }
+  },
+  "failures": [],
+  "machine": {
+    "architecture": "x86_64",
+    "logical_cpus": 32,
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+    "processor": "AMD Ryzen 9 9950X 16-Core Processor",
+    "python": "3.14.8"
+  },
+  "measurements": {
+    "cli_startup_help": {
+      "baseline_over_ams_median_ratio": 64.35274217831223,
+      "comparable": true,
+      "implementations": {
+        "ams": {
+          "max_seconds": 0.0008062469987635268,
+          "median_seconds": 0.0006930359995749313,
+          "min_seconds": 0.0004769339993799804,
+          "p95_seconds": 0.0008062469987635268,
+          "seconds": [
+            0.0007443659997079521,
+            0.0006760250016668579,
+            0.0008062469987635268,
+            0.0006930359995749313,
+            0.00047732399980304763,
+            0.0007137360007618554,
+            0.0004769339993799804,
+            0.0007287469998118468,
+            0.00048781400073494297
+          ],
+          "successful_samples": 9
+        },
+        "baseline": {
+          "max_seconds": 0.04802410599950235,
+          "median_seconds": 0.04459876700093446,
+          "min_seconds": 0.04302290400119091,
+          "p95_seconds": 0.04802410599950235,
+          "seconds": [
+            0.04802410599950235,
+            0.043318836000253214,
+            0.04591757900016091,
+            0.04302290400119091,
+            0.04466217800109007,
+            0.04414532299961138,
+            0.04459876700093446,
+            0.046164890000000014,
+            0.04350941799930297
+          ],
+          "successful_samples": 9
+        }
+      },
+      "runs": [
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 0,
+          "seconds": 0.0007443659997079521,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 0,
+          "seconds": 0.04802410599950235,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 1,
+          "seconds": 0.043318836000253214,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 1,
+          "seconds": 0.0006760250016668579,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 2,
+          "seconds": 0.0008062469987635268,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 2,
+          "seconds": 0.04591757900016091,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 3,
+          "seconds": 0.04302290400119091,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 3,
+          "seconds": 0.0006930359995749313,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 4,
+          "seconds": 0.00047732399980304763,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 4,
+          "seconds": 0.04466217800109007,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 5,
+          "seconds": 0.04414532299961138,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 5,
+          "seconds": 0.0007137360007618554,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 6,
+          "seconds": 0.0004769339993799804,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 6,
+          "seconds": 0.04459876700093446,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 7,
+          "seconds": 0.046164890000000014,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 7,
+          "seconds": 0.0007287469998118468,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--help"
+          ],
+          "repeat": 8,
+          "seconds": 0.00048781400073494297,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--help"
+          ],
+          "repeat": 8,
+          "seconds": 0.04350941799930297,
+          "status": "ok",
+          "tool": "baseline"
+        }
+      ]
+    },
+    "conversation_body_search_ams_only": {
+      "comparable": false,
+      "implementations": {
+        "ams": {
+          "max_seconds": 0.0069048379991727415,
+          "median_seconds": 0.0059040600008302135,
+          "min_seconds": 0.005607847000646871,
+          "p95_seconds": 0.0069048379991727415,
+          "seconds": [
+            0.0069048379991727415,
+            0.0059040600008302135,
+            0.0056972279999172315,
+            0.005714717999580898,
+            0.005607847000646871,
+            0.005956479999440489,
+            0.005807730000014999,
+            0.005912709999392973,
+            0.005933559999903082
+          ],
+          "successful_samples": 9
+        }
+      },
+      "runs": [
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 0,
+          "seconds": 0.0069048379991727415,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 1,
+          "seconds": 0.0059040600008302135,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 2,
+          "seconds": 0.0056972279999172315,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 3,
+          "seconds": 0.005714717999580898,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 4,
+          "seconds": 0.005607847000646871,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 5,
+          "seconds": 0.005956479999440489,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 6,
+          "seconds": 0.005807730000014999,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 7,
+          "seconds": 0.005912709999392973,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "buriedlantern",
+            "-n",
+            "3001"
+          ],
+          "repeat": 8,
+          "seconds": 0.005933559999903082,
+          "status": "ok",
+          "tool": "ams"
+        }
+      ]
+    },
+    "fresh_database_scan_warm_filesystem": {
+      "baseline_over_ams_median_ratio": 1.9479650499920966,
+      "comparable": true,
+      "implementations": {
+        "ams": {
+          "max_seconds": 0.18449952099945222,
+          "median_seconds": 0.17901852499926463,
+          "min_seconds": 0.17545040500044706,
+          "p95_seconds": 0.18449952099945222,
+          "seconds": [
+            0.18449952099945222,
+            0.18174686699967424,
+            0.1813753739988897,
+            0.17901852499926463,
+            0.17672704600045108,
+            0.17791640700124844,
+            0.17545040500044706,
+            0.1832761119985662,
+            0.17758566399970732
+          ],
+          "successful_samples": 9
+        },
+        "baseline": {
+          "max_seconds": 0.35127619600098114,
+          "median_seconds": 0.3487218299997039,
+          "min_seconds": 0.3457842679999885,
+          "p95_seconds": 0.35127619600098114,
+          "seconds": [
+            0.3487218299997039,
+            0.35108787100034533,
+            0.3463067600005161,
+            0.35100457000044116,
+            0.3475894719995267,
+            0.3497537999992346,
+            0.34688898799868184,
+            0.3457842679999885,
+            0.35127619600098114
+          ],
+          "successful_samples": 9
+        }
+      },
+      "runs": [
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-0.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 0,
+          "seconds": 0.18449952099945222,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-0.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 0,
+          "seconds": 0.3487218299997039,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-1.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 1,
+          "seconds": 0.35108787100034533,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-1.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 1,
+          "seconds": 0.18174686699967424,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-2.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 2,
+          "seconds": 0.1813753739988897,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-2.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 2,
+          "seconds": 0.3463067600005161,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-3.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 3,
+          "seconds": 0.35100457000044116,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-3.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 3,
+          "seconds": 0.17901852499926463,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-4.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 4,
+          "seconds": 0.17672704600045108,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-4.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 4,
+          "seconds": 0.3475894719995267,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-5.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 5,
+          "seconds": 0.3497537999992346,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-5.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 5,
+          "seconds": 0.17791640700124844,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-6.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 6,
+          "seconds": 0.17545040500044706,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-6.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 6,
+          "seconds": 0.34688898799868184,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-7.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 7,
+          "seconds": 0.3457842679999885,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-7.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 7,
+          "seconds": 0.1832761119985662,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-fresh-8.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 8,
+          "seconds": 0.17758566399970732,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-fresh-8.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 8,
+          "seconds": 0.35127619600098114,
+          "status": "ok",
+          "tool": "baseline"
+        }
+      ]
+    },
+    "metadata_title_search": {
+      "baseline_over_ams_median_ratio": 6.345170756237831,
+      "comparable": true,
+      "implementations": {
+        "ams": {
+          "max_seconds": 0.009254927999791107,
+          "median_seconds": 0.008771334001721698,
+          "min_seconds": 0.008090629000435001,
+          "p95_seconds": 0.009254927999791107,
+          "seconds": [
+            0.009115017999647534,
+            0.008409420999669237,
+            0.00907545699919865,
+            0.00835374099915498,
+            0.008090629000435001,
+            0.009041387000252143,
+            0.009254927999791107,
+            0.008771334001721698,
+            0.008751063998715836
+          ],
+          "successful_samples": 9
+        },
+        "baseline": {
+          "max_seconds": 0.060642084001301555,
+          "median_seconds": 0.055655612000919064,
+          "min_seconds": 0.054151948999788146,
+          "p95_seconds": 0.060642084001301555,
+          "seconds": [
+            0.054151948999788146,
+            0.055655612000919064,
+            0.05563650099975348,
+            0.05589719399904425,
+            0.05556783099927998,
+            0.057325765999848954,
+            0.0550129460007156,
+            0.05669963099899178,
+            0.060642084001301555
+          ],
+          "successful_samples": 9
+        }
+      },
+      "runs": [
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 0,
+          "seconds": 0.009115017999647534,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 0,
+          "seconds": 0.054151948999788146,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 1,
+          "seconds": 0.055655612000919064,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 1,
+          "seconds": 0.008409420999669237,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 2,
+          "seconds": 0.00907545699919865,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 2,
+          "seconds": 0.05563650099975348,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 3,
+          "seconds": 0.05589719399904425,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 3,
+          "seconds": 0.00835374099915498,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 4,
+          "seconds": 0.008090629000435001,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 4,
+          "seconds": 0.05556783099927998,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 5,
+          "seconds": 0.057325765999848954,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 5,
+          "seconds": 0.009041387000252143,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 6,
+          "seconds": 0.009254927999791107,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 6,
+          "seconds": 0.0550129460007156,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 7,
+          "seconds": 0.05669963099899178,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 7,
+          "seconds": 0.008771334001721698,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "find",
+            "atlasgarden",
+            "--titles-only",
+            "-n",
+            "3001"
+          ],
+          "repeat": 8,
+          "seconds": 0.008751063998715836,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "search",
+            "atlasgarden",
+            "--json",
+            "--limit",
+            "3001"
+          ],
+          "repeat": 8,
+          "seconds": 0.060642084001301555,
+          "status": "ok",
+          "tool": "baseline"
+        }
+      ]
+    },
+    "warm_incremental_scan": {
+      "baseline_over_ams_median_ratio": 5.370182036989127,
+      "comparable": true,
+      "implementations": {
+        "ams": {
+          "max_seconds": 0.020289682001020992,
+          "median_seconds": 0.019296743999802857,
+          "min_seconds": 0.01828045499860309,
+          "p95_seconds": 0.020289682001020992,
+          "seconds": [
+            0.018835050001143827,
+            0.020289682001020992,
+            0.01828045499860309,
+            0.019911039000362507,
+            0.01870920900000783,
+            0.0198912490013754,
+            0.019137453000439564,
+            0.01969130699944799,
+            0.019296743999802857
+          ],
+          "successful_samples": 9
+        },
+        "baseline": {
+          "max_seconds": 0.10599468799955503,
+          "median_seconds": 0.10362702800011903,
+          "min_seconds": 0.10148070000104781,
+          "p95_seconds": 0.10599468799955503,
+          "seconds": [
+            0.10580055600075866,
+            0.10362702800011903,
+            0.10484285899838142,
+            0.10148070000104781,
+            0.10599468799955503,
+            0.10291639199931524,
+            0.1024627690003399,
+            0.10256628900060605,
+            0.10372999900027935
+          ],
+          "successful_samples": 9
+        }
+      },
+      "runs": [
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 0,
+          "seconds": 0.018835050001143827,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 0,
+          "seconds": 0.10580055600075866,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 1,
+          "seconds": 0.10362702800011903,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 1,
+          "seconds": 0.020289682001020992,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 2,
+          "seconds": 0.01828045499860309,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 2,
+          "seconds": 0.10484285899838142,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 3,
+          "seconds": 0.10148070000104781,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 3,
+          "seconds": 0.019911039000362507,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 4,
+          "seconds": 0.01870920900000783,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 4,
+          "seconds": 0.10599468799955503,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 5,
+          "seconds": 0.10291639199931524,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 5,
+          "seconds": 0.0198912490013754,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 6,
+          "seconds": 0.019137453000439564,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 6,
+          "seconds": 0.1024627690003399,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 7,
+          "seconds": 0.10256628900060605,
+          "status": "ok",
+          "tool": "baseline"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 7,
+          "seconds": 0.01969130699944799,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "target/release/ams",
+            "--db",
+            "/tmp/ams-benchmark-p0v_ukvj/ams-warm.sqlite3",
+            "--json",
+            "--jobs",
+            "1",
+            "scan",
+            "--no-defaults",
+            "--root",
+            "omp=/tmp/ams-benchmark-p0v_ukvj/corpus/omp/sessions",
+            "--root",
+            "pi=/tmp/ams-benchmark-p0v_ukvj/corpus/pi/sessions",
+            "--root",
+            "codex=/tmp/ams-benchmark-p0v_ukvj/corpus/codex/sessions"
+          ],
+          "repeat": 8,
+          "seconds": 0.019296743999802857,
+          "status": "ok",
+          "tool": "ams"
+        },
+        {
+          "command": [
+            "/tmp/ams-baseline-venv/bin/session-migrate",
+            "--catalog",
+            "/tmp/ams-benchmark-p0v_ukvj/baseline-warm.sqlite3",
+            "catalog",
+            "refresh",
+            "--no-auto-roots",
+            "--json",
+            "--omp-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/omp",
+            "--pi-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/pi",
+            "--codex-root",
+            "/tmp/ams-benchmark-p0v_ukvj/corpus/codex"
+          ],
+          "repeat": 8,
+          "seconds": 0.10372999900027935,
+          "status": "ok",
+          "tool": "baseline"
+        }
+      ]
+    }
+  },
+  "methodology": {
+    "baseline_executable_requirement": "must be installed from the pinned checkout; executable version and digest recorded",
+    "body_search": "ams-only additional feature; no baseline ratio",
+    "comparison": "metadata: ams find QUERY --titles-only vs baseline catalog search QUERY",
+    "correctness": "untimed JSON preflight and identical post-timing command checks; exact native ID sets",
+    "filesystem_cache": "not dropped; warm/generated corpus, even for fresh database scans",
+    "fresh_database": "unique nonexistent SQLite path per implementation per repetition",
+    "indexing_scope": "same source corpus; ams additionally indexes readable conversation text, baseline indexes metadata only",
+    "isolation": "temporary HOME/XDG/TMPDIR, explicit roots only, no inherited native root or credential variables",
+    "order": "ams then baseline on even repetitions, baseline then ams on odd repetitions",
+    "p95": "nearest-rank",
+    "peak_rss": "not measured; cumulative child resource counters are not per-command peak RSS",
+    "timed_stdout": "DEVNULL; stderr retained on failure",
+    "timer": "time.perf_counter; subprocess wall-clock including CLI startup",
+    "warm_database": "preflight-indexed, unchanged source corpus"
+  },
+  "schema_version": 1,
+  "status": "passed"
+}

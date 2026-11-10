@@ -1,0 +1,36 @@
+[package]
+name = "ams"
+version = "0.1.1"
+edition = "2024"
+rust-version = "1.88"
+description = "Find and resume coding-agent sessions across local stores"
+license = "MIT"
+repository = "https://github.com/abdelkareemkobo/ams"
+readme = "README.md"
+
+[features]
+default = ["semantic"]
+semantic = ["dep:model2vec-rs"]
+
+[dependencies]
+anyhow = "1"
+blake3 = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive", "env"] }
+clap_complete = "4"
+model2vec-rs = { version = "0.4", optional = true }
+rayon = "1"
+rusqlite = { version = "0.38", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tempfile = "3"
+terminal_size = "0.4"
+unicode-segmentation = "1"
+unicode-width = "0.2"
+uuid = { version = "1", features = ["v4"] }
+walkdir = "2"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
