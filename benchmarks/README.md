@@ -24,4 +24,4 @@ Additional exercised behavior, separate from these synthetic timings:
 - Actual Model2Vec inference used `potion-base-8M` revision `bf8b056651a2c21b8d2565580b8569da283cab23` from a local directory. A meaning-only query with **zero lexical hits** ranked the expected database discussion first. Editing a source rejected stale vectors, then re-embedded exactly the changed session and skipped the other two.
 - An OMP fixture was installed into an isolated Pi home; the real Pi CLI successfully parsed it and exported HTML. Large-session benchmark conversion independently reparses both writers through session-migrate and checks exact user/assistant text.
 
-Reproduce with `scripts/benchmark.py` as documented in the project README. Models and private source catalogs are not part of the benchmark corpus.
+Run `python3 scripts/benchmark.py --help` for options. Install session-migrate from the pinned commit above and pass its executable with `--baseline`. Models and private source catalogs are not part of the benchmark corpus.
